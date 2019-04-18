@@ -47,6 +47,9 @@ startup:
   sessionInfo: Attributi SPID caricati
   profileInfo: Profilo utente caricato
   profileEnabled: Profilo utente abilitato
+  rootedDeviceAlert:
+    msgTitle: Dispositivo con permessi di root
+    msgText: Non è possibile eseguire l'app su questo dispositivo
 login:
   welcome:
     line1: benvenuto nella tua

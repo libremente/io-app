@@ -46,6 +46,9 @@ startup:
   sessionInfo: SPID attributes loaded
   profileInfo: User profile loaded
   profileEnabled: User profile activated
+  rootedDeviceAlert:
+    msgTitle: Device rooted
+    msgText: This device is rooted, you can't use this app
 login:
   welcome:
     line1: welcome in your

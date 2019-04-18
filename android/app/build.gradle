@@ -163,6 +163,8 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-exit-app')
+    implementation project(':jail-monkey')
     compile project(':react-native-flag-secure-android')
     compile project(':react-native-fs')
     compile project(':react-native-android-open-settings')

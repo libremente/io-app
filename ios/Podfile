@@ -55,6 +55,8 @@ target 'ItaliaApp' do
 
   pod 'RNFS', :path => '../node_modules/react-native-fs'
 
+  pod 'jail-monkey', :path => '../node_modules/jail-monkey'
+
 end
 
 # Fix a open bug in react-native-config

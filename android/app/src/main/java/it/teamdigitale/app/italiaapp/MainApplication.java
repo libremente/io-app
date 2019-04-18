@@ -8,6 +8,8 @@ import com.kevinejohn.RNMixpanel.RNMixpanel;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.facebook.react.ReactApplication;
+import com.github.wumke.RNExitApp.RNExitAppPackage;
+import com.gantix.JailMonkey.JailMonkeyPackage;
 import com.kristiansorens.flagsecure.FlagSecurePackage;
 import com.rnfs.RNFSPackage;
 import com.levelasquez.androidopensettings.AndroidOpenSettingsPackage;
@@ -45,6 +47,8 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+            new RNExitAppPackage(),
+            new JailMonkeyPackage(),
         new FlagSecurePackage(),
         new RNFSPackage(),
         new AndroidOpenSettingsPackage(),

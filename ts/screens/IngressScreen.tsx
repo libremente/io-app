@@ -1,4 +1,8 @@
 import * as pot from "italia-ts-commons/lib/pot";
+import JailMonkey from "jail-monkey";
+import DeviceInfo from "react-native-device-info";
+import RNExitApp from "react-native-exit-app";
+
 import {
   Body,
   CheckBox,
@@ -9,7 +13,7 @@ import {
   Text
 } from "native-base";
 import * as React from "react";
-import { StyleSheet } from "react-native";
+import { Alert, StyleSheet } from "react-native";
 import SplashScreen from "react-native-splash-screen";
 import { connect } from "react-redux";
 
@@ -41,9 +45,27 @@ const styles = StyleSheet.create({
  */
 class IngressScreen extends React.PureComponent<Props> {
   public componentDidMount() {
-    // Dispatch START_APPLICATION_INITIALIZATION to initialize the app
-    this.props.dispatch(startApplicationInitialization());
-
+    // if device is rooted and it isn't an emulator
+    if (!DeviceInfo.isEmulator() && JailMonkey.isJailBroken()) {
+      Alert.alert(
+        I18n.t("startup.rootedDeviceAlert.msgTitle"),
+        I18n.t("startup.rootedDeviceAlert.msgText"),
+        [
+          {
+            text: I18n.t("global.buttons.ok"),
+            style: "destructive",
+            onPress: () => {
+              // after confirmation close app
+              RNExitApp.exitApp();
+            }
+          }
+        ],
+        { cancelable: false }
+      );
+    } else {
+      // Dispatch START_APPLICATION_INITIALIZATION to initialize the app
+      this.props.dispatch(startApplicationInitialization());
+    }
     // Hide splash screen
     SplashScreen.hide();
   }
