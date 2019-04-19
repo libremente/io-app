@@ -1,4 +1,6 @@
 PODS:
+  - jail-monkey (2.2.0):
+    - React
   - Mixpanel (3.3.3)
   - React (0.59.3):
     - React/Core (= 0.59.3)
@@ -78,6 +80,7 @@ PODS:
   - yoga (0.59.3.React)
 
 DEPENDENCIES:
+  - jail-monkey (from `../node_modules/jail-monkey`)
   - react-native-background-timer (from `../node_modules/react-native-background-timer`)
   - react-native-calendar-events (from `../node_modules/react-native-calendar-events`)
   - react-native-camera (from `../node_modules/react-native-camera`)
@@ -114,6 +117,8 @@ SPEC REPOS:
     - Mixpanel
 
 EXTERNAL SOURCES:
+  jail-monkey:
+    :path: "../node_modules/jail-monkey"
   React:
     :path: "../node_modules/react-native"
   react-native-background-timer:
@@ -152,6 +157,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  jail-monkey: 32b08c236837c493e73c755d8ef896920f1765b4
   Mixpanel: 3c3925c27f7a321d5978319a72f53f8f0885afc5
   React: b52fdb80565505b7e4592b313a38868f5df51641
   react-native-background-timer: 1b6e6b4e10f1b74c367a1fdc3c72b67c619b222b
@@ -172,6 +178,6 @@ SPEC CHECKSUMS:
   TouchID: b816a3db79ac3f9da547d0d0d4bd87ff6e338ca9
   yoga: 1a492113f66a35e9e583bb0434f4b8cc668dd839
 
-PODFILE CHECKSUM: e13dd0f5f428906e121ffa04f63d8b20f9054baa
+PODFILE CHECKSUM: 86c60bea4aad9a17d1cd6b4dce7bf2bf291510a8
 
 COCOAPODS: 1.6.1
